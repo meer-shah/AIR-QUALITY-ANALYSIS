@@ -1,0 +1,143 @@
+/*
+ * MarcVista Design System — CSS custom properties
+ *
+ * Drop this at the top of your global stylesheet. Consume via var(--marcvista-*).
+ * Source of truth: design-system/tokens/tokens.json
+ */
+
+:root {
+  /* ── Brand (violet) ────────────────────────────────── */
+  --marcvista-brand-50:  #F5F3FF;
+  --marcvista-brand-100: #EDE9FE;
+  --marcvista-brand-200: #DDD6FE;
+  --marcvista-brand-300: #C4B5FD;
+  --marcvista-brand-400: #A78BFA;
+  --marcvista-brand-500: #8B5CF6;
+  --marcvista-brand-600: #7C3AED;  /* primary */
+  --marcvista-brand-700: #6D28D9;
+  --marcvista-brand-800: #5B21B6;
+  --marcvista-brand-900: #4C1D95;
+
+  /* ── Ink (text) ────────────────────────────────────── */
+  --marcvista-ink-100: #F3F4F6;
+  --marcvista-ink-200: #E5E7EB;
+  --marcvista-ink-300: #D1D5DB;
+  --marcvista-ink-400: #9CA3AF;
+  --marcvista-ink-500: #6B7280;
+  --marcvista-ink-600: #4B5563;
+  --marcvista-ink-700: #374151;
+  --marcvista-ink-900: #000000;   /* primary text — pure black */
+
+  /* ── Surfaces ──────────────────────────────────────── */
+  --marcvista-paper:     #FFFFFF;
+  --marcvista-surface:   #F5F5F5;
+  --marcvista-line:      #E5E7EB;
+  --marcvista-line-soft: #F3F4F6;
+
+  /* ── Semantic ──────────────────────────────────────── */
+  --marcvista-success-100: #DCFCE7;
+  --marcvista-success-600: #16A34A;
+  --marcvista-warn-100:    #FEF3C7;
+  --marcvista-warn-600:    #D97706;
+  --marcvista-danger-100:  #FEE2E2;
+  --marcvista-danger-600:  #DC2626;
+  --marcvista-info-100:    #EDE9FE;
+  --marcvista-info-600:    #7C3AED;
+
+  /* ── Type ──────────────────────────────────────────── */
+  --marcvista-font-sans:  'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --marcvista-font-mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --marcvista-weight-regular:  400;
+  --marcvista-weight-medium:   500;
+  --marcvista-weight-semibold: 600;
+  --marcvista-weight-bold:     700;
+
+  /* ── Spacing (4px base) ────────────────────────────── */
+  --marcvista-space-0:   0px;
+  --marcvista-space-0_5: 2px;
+  --marcvista-space-1:   4px;
+  --marcvista-space-1_5: 6px;
+  --marcvista-space-2:   8px;
+  --marcvista-space-3:   12px;
+  --marcvista-space-4:   16px;
+  --marcvista-space-5:   20px;
+  --marcvista-space-6:   24px;
+  --marcvista-space-8:   32px;
+  --marcvista-space-10:  40px;
+  --marcvista-space-12:  48px;
+  --marcvista-space-16:  64px;
+  --marcvista-space-20:  80px;
+  --marcvista-space-24:  96px;
+  --marcvista-space-32:  128px;
+  --marcvista-space-40:  160px;
+
+  /* ── Radius — sharp is the MarcVista signature ─────── */
+  --marcvista-radius-none: 0px;   /* default */
+  --marcvista-radius-xs:   4px;
+  --marcvista-radius-sm:   6px;
+  --marcvista-radius-md:   10px;
+  --marcvista-radius-lg:   16px;
+  --marcvista-radius-xl:   24px;
+  --marcvista-radius-full: 9999px;
+
+  /* ── Shadow (low-opacity, neutral) ─────────────────── */
+  --marcvista-shadow-none: none;
+  --marcvista-shadow-xs:   0 1px 2px rgba(0, 0, 0, 0.04);
+  --marcvista-shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --marcvista-shadow-md:   0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --marcvista-shadow-lg:   0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+  --marcvista-shadow-xl:   0 24px 48px rgba(0, 0, 0, 0.10), 0 8px 16px rgba(0, 0, 0, 0.06);
+
+  /* ── Motion ────────────────────────────────────────── */
+  --marcvista-dur-xs: 80ms;
+  --marcvista-dur-sm: 160ms;
+  --marcvista-dur-md: 240ms;
+  --marcvista-dur-lg: 480ms;
+  --marcvista-dur-xl: 720ms;
+
+  --marcvista-ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
+  --marcvista-ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+  --marcvista-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Container ─────────────────────────────────────── */
+  --marcvista-container-max:     1200px;
+  --marcvista-container-reading: 680px;
+  --marcvista-gutter-mobile:     16px;
+  --marcvista-gutter-desktop:    24px;
+}
+
+/* ── Base ─────────────────────────────────────────────── */
+html, body {
+  font-family: var(--marcvista-font-sans);
+  color: var(--marcvista-ink-900);
+  background: var(--marcvista-paper);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Type utility classes ─────────────────────────────── */
+.display-xl { font-size: 72px; line-height: 80px; font-weight: 700; letter-spacing: -0.02em; }
+.display-lg { font-size: 56px; line-height: 64px; font-weight: 700; letter-spacing: -0.02em; }
+.h1         { font-size: 40px; line-height: 48px; font-weight: 700; letter-spacing: -0.015em; }
+.h2         { font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.015em; }
+.h3         { font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -0.015em; }
+.h4         { font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.015em; }
+.body-lg    { font-size: 18px; line-height: 28px; font-weight: 400; }
+.body-md    { font-size: 16px; line-height: 24px; font-weight: 400; }
+.body-sm    { font-size: 14px; line-height: 20px; font-weight: 400; }
+.caption    { font-size: 12px; line-height: 16px; font-weight: 500; }
+.overline   { font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.code       { font-family: var(--marcvista-font-mono); font-size: 14px; line-height: 20px; font-weight: 400; }
+
+/* ── Reduced motion ───────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

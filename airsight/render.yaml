@@ -1,0 +1,20 @@
+# Render Blueprint — one free Docker web service that serves the AirSight
+# UI and API from a single container.
+#
+# Deploy: push this repo to GitHub, then in Render choose
+# "New +" -> "Blueprint" and point it at the repo. Render reads this file.
+services:
+  - type: web
+    name: airsight
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    # Render injects $PORT; the container's CMD already honours it.
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      # FastAPI serves the SPA itself, so same-origin requests need no CORS.
+      # Set to your custom domain(s) if you split the frontend off later.
+      - key: CORS_ORIGINS
+        value: '["*"]'

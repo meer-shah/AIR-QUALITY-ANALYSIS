@@ -1,0 +1,26 @@
+# Dev convenience: build the single AirSight image and run it on port 8000.
+#
+#   docker compose up --build      # build + start (UI + API at http://localhost:8000)
+#   docker compose down            # stop and remove
+#
+# This mirrors production exactly (one container serving the built UI + API),
+# which is handy for verifying a deploy before pushing to a host.
+services:
+  airsight:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: airsight:latest
+    container_name: airsight
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - CORS_ORIGINS=["*"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

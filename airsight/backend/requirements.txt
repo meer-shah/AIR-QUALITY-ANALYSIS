@@ -1,0 +1,9 @@
+# --- AirSight backend dependencies (kept lean for free-tier hosting) ---
+# No pyarrow on purpose: artifacts are gzipped CSV (read via the stdlib), which
+# keeps the image small and the cold-start fast on free tiers.
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pandas==3.0.3
+numpy==2.4.6
+pydantic==2.10.4
+pydantic-settings==2.7.1

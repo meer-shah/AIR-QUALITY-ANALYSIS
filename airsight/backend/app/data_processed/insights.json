@@ -1,0 +1,349 @@
+{
+  "city": "Bogotá, Colombia",
+  "pipeline": [
+    {
+      "step": 1,
+      "name": "Explore",
+      "summary": "Inspect 19 RMCAB stations, 7 pollutants, hourly for 2021; quantify gaps."
+    },
+    {
+      "step": 2,
+      "name": "Missing-data prediction",
+      "summary": "Fill gaps with combined models — linear interpolation for non-target pollutants and a neural network for the target."
+    },
+    {
+      "step": 3,
+      "name": "Estimate between stations",
+      "summary": "Interpolate pollution anywhere in the city with distance-weighted KNN, tuned by MAE."
+    }
+  ],
+  "imputation": {
+    "challenge": "Missing-data prediction",
+    "target": "PM2.5",
+    "unit": "µg/m³",
+    "holdout_pct": 15,
+    "methods": [
+      {
+        "key": "linear_interp",
+        "label": "Linear interpolation (in time)",
+        "mae": 3.867,
+        "n": 22651
+      },
+      {
+        "key": "last_value",
+        "label": "Last known value (carry-forward)",
+        "mae": 5.143,
+        "n": 22651
+      },
+      {
+        "key": "nearest_station",
+        "label": "Nearest station, k=1 (in space)",
+        "mae": 9.763,
+        "n": 22651
+      }
+    ],
+    "best_baseline": "linear_interp",
+    "production_model": {
+      "label": "Combined models — linear interpolation (non-target pollutants) + neural network (target)",
+      "note": "The shipped dataset was completed with this combination; the baselines above are what it was benchmarked against. The neural network is not re-trained here (it needs TensorFlow), so its MAE is reported from the original analysis, not recomputed.",
+      "reported_mae": 4.08
+    }
+  },
+  "spatial_knn": {
+    "challenge": "Estimating pollution between stations",
+    "target": "PM2.5",
+    "unit": "µg/m³",
+    "method": "Leave-one-station-out CV, same-timestamp, 1/distance weighting",
+    "excluded_stations": [
+      "7MA",
+      "COL",
+      "CSE",
+      "MOV2"
+    ],
+    "timestep_hours": 6,
+    "by_k": [
+      {
+        "k": 1,
+        "mae": 7.545,
+        "n": 20360
+      },
+      {
+        "k": 2,
+        "mae": 6.599,
+        "n": 20360
+      },
+      {
+        "k": 3,
+        "mae": 6.117,
+        "n": 20360
+      },
+      {
+        "k": 4,
+        "mae": 5.906,
+        "n": 20360
+      },
+      {
+        "k": 5,
+        "mae": 5.869,
+        "n": 20360
+      },
+      {
+        "k": 6,
+        "mae": 5.864,
+        "n": 20360
+      },
+      {
+        "k": 7,
+        "mae": 5.853,
+        "n": 20360
+      },
+      {
+        "k": 8,
+        "mae": 5.874,
+        "n": 20360
+      }
+    ],
+    "best_k": 7,
+    "best_mae": 5.853
+  },
+  "gap_distribution": {
+    "PM2.5": [
+      {
+        "bucket": "1 h",
+        "gaps": 711
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 257
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 74
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 106
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 41
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 29
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 38
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 48
+      }
+    ],
+    "PM10": [
+      {
+        "bucket": "1 h",
+        "gaps": 1526
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 579
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 272
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 303
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 113
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 47
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 32
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 41
+      }
+    ],
+    "NO": [
+      {
+        "bucket": "1 h",
+        "gaps": 439
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 277
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 109
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 104
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 46
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 17
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 32
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 38
+      }
+    ],
+    "NO2": [
+      {
+        "bucket": "1 h",
+        "gaps": 434
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 280
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 108
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 104
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 46
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 17
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 32
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 38
+      }
+    ],
+    "NOX": [
+      {
+        "bucket": "1 h",
+        "gaps": 435
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 281
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 109
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 104
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 46
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 17
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 32
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 38
+      }
+    ],
+    "CO": [
+      {
+        "bucket": "1 h",
+        "gaps": 344
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 161
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 90
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 53
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 20
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 12
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 29
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 37
+      }
+    ],
+    "OZONE": [
+      {
+        "bucket": "1 h",
+        "gaps": 367
+      },
+      {
+        "bucket": "2 h",
+        "gaps": 242
+      },
+      {
+        "bucket": "3 h",
+        "gaps": 103
+      },
+      {
+        "bucket": "4–6 h",
+        "gaps": 87
+      },
+      {
+        "bucket": "7–12 h",
+        "gaps": 47
+      },
+      {
+        "bucket": "13–24 h",
+        "gaps": 17
+      },
+      {
+        "bucket": "25–48 h",
+        "gaps": 20
+      },
+      {
+        "bucket": "49+ h",
+        "gaps": 32
+      }
+    ]
+  }
+}
