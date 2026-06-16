@@ -1,0 +1,38 @@
+# --- Python ---
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# --- Node / frontend ---
+node_modules/
+**/node_modules/
+**/dist/
+dist-ssr/
+*.local
+.vite/
+
+# --- Environment / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Editors / OS ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Jupyter ---
+**/.ipynb_checkpoints/
+
+# NOTE: airsight/backend/app/data_processed/ is intentionally NOT ignored.
+# The generated artifacts (meta.json, stations.json, *.csv.gz, bogota.geojson)
+# are committed so deploys work without re-running the ETL. hourly.csv.gz is the
+# largest (~3.5 MB) but well under GitHub limits, so we track it too — this lets
+# the Docker build skip the ETL entirely and start fast on free tiers.

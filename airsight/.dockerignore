@@ -1,0 +1,29 @@
+# Keep the Docker build context small and reproducible.
+# (Anything excluded here is rebuilt or unused inside the image.)
+
+# Python
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Node / frontend build output (rebuilt in the frontend stage)
+node_modules/
+**/node_modules/
+frontend/dist/
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# VCS & local tooling
+.git/
+.gitignore
+
+# Images / large local assets not needed at runtime
+img/
+
+# OS noise
+.DS_Store
+Thumbs.db

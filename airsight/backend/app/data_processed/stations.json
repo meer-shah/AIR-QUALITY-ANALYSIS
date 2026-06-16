@@ -1,0 +1,401 @@
+[
+  {
+    "code": "7MA",
+    "name": "Movil 7Ma",
+    "lat": 4.645117,
+    "lon": -74.061503,
+    "locality": "Chapinero",
+    "zone": "Urbana",
+    "type": "De tráfico",
+    "address": "Carrera 7 con calle 60",
+    "altitude_m": 2583.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0384,
+      "PM10": 0.0987,
+      "NO": 0.1128,
+      "NO2": 0.1127,
+      "NOX": 0.1126,
+      "CO": 0.8106,
+      "OZONE": 1.0
+    }
+  },
+  {
+    "code": "BOL",
+    "name": "Bolivia",
+    "lat": 4.735578,
+    "lon": -74.125925,
+    "locality": "Engativá",
+    "zone": "Sub urbana",
+    "type": "De fondo",
+    "address": "Avenida Calle 80 # 121-98",
+    "altitude_m": 2574.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0108,
+      "PM10": 0.0224,
+      "NO": 0.0987,
+      "NO2": 0.0987,
+      "NOX": 0.0987,
+      "CO": 0.0095,
+      "OZONE": 0.5913
+    }
+  },
+  {
+    "code": "CBV",
+    "name": "Ciudad Bolivar",
+    "lat": 4.577889,
+    "lon": -74.166272,
+    "locality": "Ciudad Bolívar",
+    "zone": "Urbana",
+    "type": "Residencial",
+    "address": "Calle 70 Sur # 56 - 11",
+    "altitude_m": 2661.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0317,
+      "PM10": 0.0355,
+      "NO": 0.0218,
+      "NO2": 0.0218,
+      "NOX": 0.0218,
+      "CO": 0.0197,
+      "OZONE": 0.0914
+    }
+  },
+  {
+    "code": "CDAR",
+    "name": "Centro Alto Rendimiento",
+    "lat": 4.658417,
+    "lon": -74.083944,
+    "locality": "Engativá",
+    "zone": "Urbana",
+    "type": "De tráfico",
+    "address": "Calle 63 # 59A-06",
+    "altitude_m": 2552.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0232,
+      "PM10": 0.1047,
+      "NO": 0.0127,
+      "NO2": 0.0126,
+      "NOX": 0.0126,
+      "CO": 0.0121,
+      "OZONE": 0.0284
+    }
+  },
+  {
+    "code": "COL",
+    "name": "Colina",
+    "lat": 4.736981,
+    "lon": -74.069472,
+    "locality": "Suba",
+    "zone": "Urbana",
+    "type": "De fondo",
+    "address": "Avenida Boyacá No 142ª-55",
+    "altitude_m": 2555.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.2271,
+      "PM10": 0.2426,
+      "NO": 0.1557,
+      "NO2": 0.1558,
+      "NOX": 0.1558,
+      "CO": 0.1771,
+      "OZONE": 0.3965
+    }
+  },
+  {
+    "code": "CSE",
+    "name": "Carvajal Sevillana",
+    "lat": 4.595958,
+    "lon": -74.148483,
+    "locality": "Kennedy",
+    "zone": "Urbana",
+    "type": "Tráfico/industrial",
+    "address": "Autopista Sur # 63-40",
+    "altitude_m": 2563.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.155,
+      "PM10": 0.1411,
+      "NO": 1.0,
+      "NO2": 1.0,
+      "NOX": 1.0,
+      "CO": 0.0796,
+      "OZONE": 0.2259
+    }
+  },
+  {
+    "code": "FTB",
+    "name": "Fontibon",
+    "lat": 4.678169,
+    "lon": -74.143714,
+    "locality": "Fontibón",
+    "zone": "Urbana",
+    "type": "De tráfico",
+    "address": "Carrera 104 # 20 C - 31",
+    "altitude_m": 2551.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0856,
+      "PM10": 0.0841,
+      "NO": 0.1474,
+      "NO2": 0.1477,
+      "NOX": 0.1479,
+      "CO": 0.0725,
+      "OZONE": 0.0984
+    }
+  },
+  {
+    "code": "GYR",
+    "name": "Guaymaral",
+    "lat": 4.783614,
+    "lon": -74.043994,
+    "locality": "Suba",
+    "zone": "Sub urbana",
+    "type": "De fondo",
+    "address": "Autopista Norte # 205-59",
+    "altitude_m": 2580.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0235,
+      "PM10": 0.1062,
+      "NO": 0.1108,
+      "NO2": 0.1104,
+      "NOX": 0.111,
+      "CO": 0.4342,
+      "OZONE": 0.062
+    }
+  },
+  {
+    "code": "JAZ",
+    "name": "El Jazmin",
+    "lat": 4.608417,
+    "lon": -74.114869,
+    "locality": "Puente Aranda",
+    "zone": "Urbana",
+    "type": "Residencial",
+    "address": "Calle 1 G # 41 A 39",
+    "altitude_m": 2559.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0338,
+      "PM10": 0.0301,
+      "NO": 0.061,
+      "NO2": 0.061,
+      "NOX": 0.061,
+      "CO": 0.0155,
+      "OZONE": 0.0237
+    }
+  },
+  {
+    "code": "KEN",
+    "name": "Kennedy",
+    "lat": 4.625083,
+    "lon": -74.161222,
+    "locality": "Kennedy",
+    "zone": "Urbana",
+    "type": "De fondo",
+    "address": "Carrera 80 # 40-55 sur",
+    "altitude_m": 2580.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0474,
+      "PM10": 0.0766,
+      "NO": 0.0346,
+      "NO2": 0.0346,
+      "NOX": 0.0346,
+      "CO": 0.1678,
+      "OZONE": 0.0999
+    }
+  },
+  {
+    "code": "LFR",
+    "name": "Las Ferias",
+    "lat": 4.690628,
+    "lon": -74.082378,
+    "locality": "Engativá",
+    "zone": "Urbana",
+    "type": "De tráfico",
+    "address": "Avenida Calle 80 # 69Q-50",
+    "altitude_m": 2552.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.029,
+      "PM10": 0.0966,
+      "NO": 0.0309,
+      "NO2": 0.0311,
+      "NOX": 0.0313,
+      "CO": 0.1269,
+      "OZONE": 0.0118
+    }
+  },
+  {
+    "code": "MAM",
+    "name": "Minambiente",
+    "lat": 4.625364,
+    "lon": -74.066972,
+    "locality": "Santa Fe",
+    "zone": "Urbana",
+    "type": "De tráfico",
+    "address": "Calle 37 # 8-40",
+    "altitude_m": 2621.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0227,
+      "PM10": 0.1255,
+      "NO": 0.5795,
+      "NO2": 0.5795,
+      "NOX": 0.5795,
+      "CO": 0.0574,
+      "OZONE": 0.0197
+    }
+  },
+  {
+    "code": "MOV2",
+    "name": "Movil Fontivon",
+    "lat": 4.667789,
+    "lon": -74.148483,
+    "locality": "Fontibón",
+    "zone": "Urbana",
+    "type": "Tráfico/industrial",
+    "address": "Cra. 98 #16 B 50",
+    "altitude_m": 2547.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.2811,
+      "PM10": 0.2506,
+      "NO": 0.4881,
+      "NO2": 0.4881,
+      "NOX": 0.4881,
+      "CO": 1.0,
+      "OZONE": 0.5753
+    }
+  },
+  {
+    "code": "PTE",
+    "name": "Pueste Aranda",
+    "lat": 4.631817,
+    "lon": -74.117278,
+    "locality": "Puente Aranda",
+    "zone": "Urbana",
+    "type": "Industrial",
+    "address": "Calle 10 # 65-28",
+    "altitude_m": 2590.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0894,
+      "PM10": 0.2256,
+      "NO": 0.0441,
+      "NO2": 0.0441,
+      "NOX": 0.0441,
+      "CO": 0.0418,
+      "OZONE": 0.0305
+    }
+  },
+  {
+    "code": "SCR",
+    "name": "San Cristobal",
+    "lat": 4.572558,
+    "lon": -74.083639,
+    "locality": "San Cristóbal",
+    "zone": "Urbana",
+    "type": "De fondo",
+    "address": "Carrera 2 Este # 12-78 sur",
+    "altitude_m": 2688.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0362,
+      "PM10": 0.0671,
+      "NO": 0.0255,
+      "NO2": 0.0255,
+      "NOX": 0.0255,
+      "CO": 0.4307,
+      "OZONE": 0.0177
+    }
+  },
+  {
+    "code": "SUB",
+    "name": "Suba",
+    "lat": 4.761222,
+    "lon": -74.093433,
+    "locality": "Suba",
+    "zone": "Sub urbana",
+    "type": "De fondo",
+    "address": "Carrera 111 # 159A-61",
+    "altitude_m": 2571.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.051,
+      "PM10": 0.0839,
+      "NO": 0.061,
+      "NO2": 0.0608,
+      "NOX": 0.0607,
+      "CO": 0.0565,
+      "OZONE": 0.0412
+    }
+  },
+  {
+    "code": "TUN",
+    "name": "Tunal",
+    "lat": 4.576206,
+    "lon": -74.130975,
+    "locality": "Tunjuelito",
+    "zone": "Urbana",
+    "type": "De fondo",
+    "address": "Carrera 24 # 49-86 sur",
+    "altitude_m": 2589.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0457,
+      "PM10": 0.0218,
+      "NO": 0.1279,
+      "NO2": 0.1279,
+      "NOX": 0.1279,
+      "CO": 0.0147,
+      "OZONE": 0.0418
+    }
+  },
+  {
+    "code": "USM",
+    "name": "Usame",
+    "lat": 4.532097,
+    "lon": -74.116947,
+    "locality": "Usme",
+    "zone": "Urbana",
+    "type": "Residencial",
+    "address": "Carrera 11 # 65 D 50 Sur",
+    "altitude_m": 2593.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.0692,
+      "PM10": 0.0323,
+      "NO": 0.0187,
+      "NO2": 0.0187,
+      "NOX": 0.0186,
+      "CO": 0.0282,
+      "OZONE": 0.3018
+    }
+  },
+  {
+    "code": "USQ",
+    "name": "Usaquen",
+    "lat": 4.710381,
+    "lon": -74.030414,
+    "locality": "Usaquén",
+    "zone": "Urbana",
+    "type": "De fondo",
+    "address": "Carrera 7B Bis # 132-11",
+    "altitude_m": 2570.0,
+    "records": 8760,
+    "imputed_share": {
+      "PM2.5": 0.4473,
+      "PM10": 0.4394,
+      "NO": 0.0269,
+      "NO2": 0.0269,
+      "NOX": 0.0269,
+      "CO": 0.0111,
+      "OZONE": 0.0106
+    }
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "city": "Bogotá, Colombia",
+  "source": "Red de Monitoreo de Calidad del Aire de Bogotá (RMCAB)",
+  "year": 2021,
+  "rows": 166440,
+  "stations": 19,
+  "date_min": "2021-01-01",
+  "date_max": "2021-12-31",
+  "pollutants": [
+    {
+      "key": "PM2.5",
+      "label": "PM2.5",
+      "unit": "µg/m³",
+      "name": "Fine particulate matter"
+    },
+    {
+      "key": "PM10",
+      "label": "PM10",
+      "unit": "µg/m³",
+      "name": "Coarse particulate matter"
+    },
+    {
+      "key": "NO",
+      "label": "NO",
+      "unit": "µg/m³",
+      "name": "Nitric oxide"
+    },
+    {
+      "key": "NO2",
+      "label": "NO2",
+      "unit": "µg/m³",
+      "name": "Nitrogen dioxide"
+    },
+    {
+      "key": "NOX",
+      "label": "NOX",
+      "unit": "µg/m³",
+      "name": "Nitrogen oxides"
+    },
+    {
+      "key": "CO",
+      "label": "CO",
+      "unit": "mg/m³",
+      "name": "Carbon monoxide"
+    },
+    {
+      "key": "OZONE",
+      "label": "Ozone",
+      "unit": "µg/m³",
+      "name": "Ground-level ozone"
+    }
+  ],
+  "imputation": {
+    "total_rows": 166440,
+    "total_cells": 1165080,
+    "overall_imputed_cells": 181690,
+    "overall_imputed_pct": 15.59,
+    "by_method_totals": {
+      "neural network": 15312,
+      "interpolated": 166378
+    },
+    "per_pollutant": [
+      {
+        "key": "PM2.5",
+        "observed": 151128,
+        "imputed": 15312,
+        "imputed_pct": 9.2,
+        "by_method": {
+          "neural network": 15312
+        }
+      },
+      {
+        "key": "PM10",
+        "observed": 146426,
+        "imputed": 20014,
+        "imputed_pct": 12.02,
+        "by_method": {
+          "interpolated": 20014
+        }
+      },
+      {
+        "key": "NO",
+        "observed": 138776,
+        "imputed": 27664,
+        "imputed_pct": 16.62,
+        "by_method": {
+          "interpolated": 27664
+        }
+      },
+      {
+        "key": "NO2",
+        "observed": 138778,
+        "imputed": 27662,
+        "imputed_pct": 16.62,
+        "by_method": {
+          "interpolated": 27662
+        }
+      },
+      {
+        "key": "NOX",
+        "observed": 138772,
+        "imputed": 27668,
+        "imputed_pct": 16.62,
+        "by_method": {
+          "interpolated": 27668
+        }
+      },
+      {
+        "key": "CO",
+        "observed": 135202,
+        "imputed": 31238,
+        "imputed_pct": 18.77,
+        "by_method": {
+          "interpolated": 31238
+        }
+      },
+      {
+        "key": "OZONE",
+        "observed": 134308,
+        "imputed": 32132,
+        "imputed_pct": 19.31,
+        "by_method": {
+          "interpolated": 32132
+        }
+      }
+    ]
+  }
+}
